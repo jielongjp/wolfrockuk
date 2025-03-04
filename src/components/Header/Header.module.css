@@ -1,0 +1,41 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header div {
+  font-family: "New Rocker", sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.nav {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+
+.link {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+  transition: 0.3s;
+  margin: 8px 20px;
+}
+
+.link:hover {
+  color: #ff4500;
+}

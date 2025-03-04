@@ -1,0 +1,30 @@
+.main {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.title {
+  margin-top: 40px;
+  font-size: 36px;
+  font-family: "New Rocker", sans-serif;
+  color: #ff4500;
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+.imageContainer {
+  margin-top: 40px;
+}
+
+.image {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
