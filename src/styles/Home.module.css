@@ -3,12 +3,18 @@
   width: 100%;
   height: 100vh;
   margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
 }
 
 .section,
 .about {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
 }
 
 .title {
@@ -18,9 +24,18 @@
   margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+}
+
 .image {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .about {
@@ -35,4 +50,16 @@
 
 .about .text {
   max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about .text {
+    max-width: 100%;
+  }
 }
