@@ -44,7 +44,7 @@ export default function Home() {
           </p>
         </div>
         <Image
-          src="/rock-concert.webp"
+          src="/WOLF-1979.png"
           alt="About the Band"
           width={500}
           height={350}

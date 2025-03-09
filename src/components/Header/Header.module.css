@@ -3,27 +3,33 @@
   top: 0;
   width: 100%;
   background: white;
-  color: black;
+  color: #8d0000;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 20px 30px;
   font-size: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
 
-.header div {
+.logoContainer {
+  flex-shrink: 0;
+}
+
+.navCenter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand {
   font-family: "New Rocker", sans-serif;
   font-size: 40px;
   letter-spacing: 2px;
-}
-
-.nav {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  padding: 0 30px;
-  justify-content: space-between;
 }
 
 .link {
@@ -33,9 +39,51 @@
   font-weight: 500;
   font-size: 18px;
   transition: 0.3s;
-  margin: 8px 20px;
 }
 
 .link:hover {
-  color: #ff4500;
+  color: #8d0000;
+}
+
+.desktopOnly {
+  display: inline-block;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 99;
+  border-radius: 12px;
+  min-width: 180px;
+}
+
+@media (max-width: 768px) {
+  .desktopOnly {
+    display: none;
+  }
+
+  .mobileMenu .link {
+    font-size: 20px;
+    padding: 12px 10px;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
