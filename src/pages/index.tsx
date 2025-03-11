@@ -35,12 +35,10 @@ export default function Home() {
         <div className={styles.text}>
           <h2>About the Band</h2>
           <p>
-            Wolf, not to be confused with their Swedish heavy metal namesakes,
-            first formed as a school rock band back in 1976 when part of
-            Bridgewater High School still formed Appleton Hall County Grammar
-            School, under the watchful eye of physics teacher and guitarist John
-            ‘Muskrat’ Muscutt, lead guitarist Ian Harris, drummer Mark Olly,
-            bass player Brian Peers, and vocalist Mike ‘Sag’ Sayer.
+            Wolf first formed as a school rock band back in 1976 under the
+            watchful eye of physics teacher and guitarist John ‘Muskrat’
+            Muscutt, lead guitarist Ian Harris, drummer Mark Olly, bass player
+            Brian Peers, and vocalist Mike ‘Sag’ Sayer.
           </p>
         </div>
         <Image

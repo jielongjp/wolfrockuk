@@ -18,12 +18,21 @@ export default function Header() {
         <Link href="/" className={`${styles.link} ${styles.desktopOnly}`}>
           Home
         </Link>
+        <Link href="/media" className={`${styles.link} ${styles.desktopOnly}`}>
+          Media
+        </Link>
         <div className={styles.brand}>Wolf</div>
         <Link
           href="/about-us"
           className={`${styles.link} ${styles.desktopOnly}`}
         >
-          About Us
+          The Band
+        </Link>
+        <Link
+          href="/contact"
+          className={`${styles.link} ${styles.desktopOnly}`}
+        >
+          Contact
         </Link>
       </div>
 
@@ -43,6 +52,20 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
           >
             Home
+          </Link>
+          <Link
+            href="/media"
+            className={styles.link}
+            onClick={() => setMenuOpen(false)}
+          >
+            Media
+          </Link>
+          <Link
+            href="/contact"
+            className={styles.link}
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact
           </Link>
           <Link
             href="/about-us"
