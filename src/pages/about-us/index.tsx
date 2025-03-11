@@ -23,6 +23,15 @@ export default function About() {
           />
         </div>
         <p className={styles.paragraph}></p>
+        <p className={styles.paragraph}>Wolf in 2023:</p>
+        <div className={styles.imageContainer}>
+          <img
+            src="/WOLF-2023.jpeg"
+            alt="Wolf band members"
+            className={styles.image}
+          />
+        </div>
+        <p className={styles.paragraph}></p>
         <p className={styles.paragraph}>Wolf in 1978 and 2024</p>
         <p className={styles.paragraph}>
           (From top to bottom: vocalist Mike ‘Sag’ Sayer, lead guitarist Ian

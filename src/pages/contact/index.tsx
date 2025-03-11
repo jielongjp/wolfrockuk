@@ -1,4 +1,3 @@
-import { useState, FormEvent } from "react";
 import styles from "@/styles/Contact.module.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
