@@ -8,7 +8,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Wolf</title>
+        <title>Wolf Rock Band UK</title>
+        <meta
+          name="description"
+          content="Wolf, a rock band based in the UK first formed in 1976 and still rocking today."
+        />
       </Head>
       <Header />
       <section className={styles.hero}>
