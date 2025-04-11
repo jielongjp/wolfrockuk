@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: white;
+  background: #f2edeb;
   color: #8d0000;
   display: flex;
   align-items: center;
@@ -27,7 +27,7 @@
 }
 
 .brand {
-  font-family: "New Rocker", sans-serif;
+  font-family: "MyCustomFont", sans-serif;
   font-size: 40px;
   letter-spacing: 2px;
 }

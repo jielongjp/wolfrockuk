@@ -10,3 +10,10 @@ body {
   background: #0d1117;
   color: white;
 }
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("/fonts/Hermia Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

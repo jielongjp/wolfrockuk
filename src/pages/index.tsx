@@ -24,6 +24,8 @@ export default function Home() {
         />
       </section>
 
+      <section className={styles.gradient}></section>
+
       <section className={styles.section}>
         <h2 className={styles.title}>Upcoming Shows</h2>
         <Image
