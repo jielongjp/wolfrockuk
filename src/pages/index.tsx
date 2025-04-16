@@ -17,14 +17,14 @@ export default function Home() {
       <Header />
       <section className={styles.hero}>
         <Image
-          src="/rock-concert.webp"
+          src="/IMG_8063.jpeg"
           alt="Hero"
           layout="fill"
           objectFit="cover"
         />
       </section>
 
-      <section className={styles.gradient}></section>
+      {/* <section className={styles.gradient}></section> */}
 
       <section className={styles.section}>
         <h2 className={styles.title}>Upcoming Shows</h2>
