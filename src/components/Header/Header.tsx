@@ -21,7 +21,7 @@ export default function Header() {
         <Link href="/media" className={`${styles.link} ${styles.desktopOnly}`}>
           Media
         </Link>
-        <div className={styles.brand}>Wolf</div>
+        <div className={styles.brand}>WOLF</div>
         <Link
           href="/about-us"
           className={`${styles.link} ${styles.desktopOnly}`}

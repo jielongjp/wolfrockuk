@@ -1,26 +1,96 @@
+import fs from "fs";
+import path from "path";
+import { useState } from "react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import styles from "@/styles/About.module.css";
+import styles from "@/styles/Media.module.css";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
-export default function About() {
+interface GigPhotos {
+  gigName: string;
+  images: string[];
+}
+
+interface Props {
+  gigs: GigPhotos[];
+}
+
+export default function MediaPage({ gigs }: Props) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [lightboxImages, setLightboxImages] = useState<{ src: string }[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const openLightbox = (images: string[], index: number) => {
+    setLightboxImages(images.map((img) => ({ src: img })));
+    setCurrentIndex(index);
+    setIsOpen(true);
+  };
+
   return (
     <div>
       <Header />
       <main className={styles.main}>
         <h1 className={styles.title}>Photos</h1>
-        <p className={styles.paragraph}>Coming soon...</p>
-        <p className={styles.paragraph}>
-          Check back later to see images and videos of past gigs.
-        </p>
-        <div className={styles.imageContainer}>
-          {/* <img
-            src="/images/about-us.jpg"
-            alt="Band members"
-            className={styles.image}
-          /> */}
-        </div>
+        {gigs.length === 0 ? (
+          <p className={styles.paragraph}>Coming soon...</p>
+        ) : (
+          gigs.map((gig) => {
+            const imagePaths = gig.images.map(
+              (img) => `/gigs/${gig.gigName}/${img}`
+            );
+            return (
+              <section key={gig.gigName} className={styles.gigSection}>
+                <h2 className={styles.gigTitle}>{gig.gigName}</h2>
+                <div className={styles.imageGrid}>
+                  {imagePaths.map((imgSrc, i) => (
+                    <div
+                      key={imgSrc}
+                      className={styles.imageCard}
+                      onClick={() => openLightbox(imagePaths, i)}
+                    >
+                      <img
+                        src={imgSrc}
+                        alt={`Photo ${i + 1}`}
+                        className={styles.image}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </section>
+            );
+          })
+        )}
       </main>
       <Footer />
+
+      {isOpen && (
+        <Lightbox
+          open={isOpen}
+          close={() => setIsOpen(false)}
+          slides={lightboxImages}
+          index={currentIndex}
+        />
+      )}
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const gigsDir = path.join(process.cwd(), "public/gigs");
+  const gigFolders = fs.readdirSync(gigsDir);
+
+  const gigs: GigPhotos[] = gigFolders.map((folder) => {
+    const folderPath = path.join(gigsDir, folder);
+    const images = fs
+      .readdirSync(folderPath)
+      .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file));
+    return { gigName: folder, images };
+  });
+
+  return {
+    props: {
+      gigs,
+    },
+  };
 }

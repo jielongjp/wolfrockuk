@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Wolf Rock Band UK</title>
+        <title>WOLF Rock Band UK</title>
         <meta
           name="description"
-          content="Wolf, a rock band based in the UK first formed in 1976 and still rocking today."
+          content="WOLF, a rock band based in the UK first formed in 1976 and still rocking today."
         />
       </Head>
       <Header />
@@ -41,7 +41,7 @@ export default function Home() {
         <div className={styles.text}>
           <h2>About the Band</h2>
           <p>
-            Wolf first formed as a school rock band back in 1976 under the
+            WOLF first formed as a school rock band back in 1976 under the
             watchful eye of physics teacher and guitarist John ‘Muskrat’
             Muscutt, lead guitarist Ian Harris, drummer Mark Olly, bass player
             Brian Peers, and vocalist Mike ‘Sag’ Sayer.
