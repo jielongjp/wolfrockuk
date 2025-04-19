@@ -4,6 +4,7 @@ import Link from "next/link";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import styles from "@/styles/Home.module.css";
+import HeroSlider from "@/components/HeroSlider/HeroSlider";
 
 export default function Home() {
   return (
@@ -29,15 +30,7 @@ export default function Home() {
         </div>
 
         {/* Mobile Image */}
-        <div className={styles.mobileImage}>
-          <Image
-            src="/N1QvoGIo.jpeg"
-            alt="Hero Mobile"
-            layout="fill"
-            objectFit="cover"
-            priority
-          />
-        </div>
+        <HeroSlider />
       </section>
 
       {/* <section className={styles.gradient}></section> */}
