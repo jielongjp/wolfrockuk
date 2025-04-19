@@ -49,7 +49,7 @@ export default function ContactForm() {
               id="message"
               name="message"
               required
-              placeholder="Your Message"
+              placeholder="Make some noise 🤘"
               className={styles.textareaField}
             ></textarea>
           </div>

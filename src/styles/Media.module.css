@@ -7,7 +7,9 @@
   font-size: 2rem;
   margin-bottom: 1rem;
   font-family: "New Rocker", sans-serif;
+  color: rgb(137, 0, 0);
   font-weight: bold;
+  text-align: center;
 }
 
 .paragraph {
@@ -22,6 +24,7 @@
 .gigTitle {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .imageGrid {
@@ -47,4 +50,10 @@
   height: auto;
   display: block;
   border-radius: 8px;
+}
+
+.videoWrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 12px;
 }

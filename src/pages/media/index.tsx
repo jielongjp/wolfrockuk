@@ -6,6 +6,7 @@ import Footer from "@/components/Footer/Footer";
 import styles from "@/styles/Media.module.css";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import gigMeta from "@/utils/gigMeta";
 
 interface GigPhotos {
   gigName: string;
@@ -31,7 +32,7 @@ export default function MediaPage({ gigs }: Props) {
     <div>
       <Header />
       <main className={styles.main}>
-        <h1 className={styles.title}>Photos</h1>
+        <h1 className={styles.title}>WOLF Gigs</h1>
         {gigs.length === 0 ? (
           <p className={styles.paragraph}>Coming soon...</p>
         ) : (
@@ -39,9 +40,33 @@ export default function MediaPage({ gigs }: Props) {
             const imagePaths = gig.images.map(
               (img) => `/gigs/${gig.gigName}/${img}`
             );
+
+            const meta = gigMeta[gig.gigName];
+            const title = meta?.title || gig.gigName;
+            const youtubeVideos = meta?.youtube || [];
+
             return (
               <section key={gig.gigName} className={styles.gigSection}>
-                <h2 className={styles.gigTitle}>{gig.gigName}</h2>
+                <h2 className={styles.gigTitle}>{title}</h2>
+
+                {youtubeVideos.length > 0 && (
+                  <div className={styles.videos}>
+                    {youtubeVideos.map((url, i) => (
+                      <div key={i} className={styles.videoWrapper}>
+                        <iframe
+                          width="560"
+                          height="315"
+                          src={url}
+                          title={`YouTube video ${i + 1}`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+
                 <div className={styles.imageGrid}>
                   {imagePaths.map((imgSrc, i) => (
                     <div

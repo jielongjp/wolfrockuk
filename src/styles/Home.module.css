@@ -14,7 +14,14 @@
 .section,
 .about {
   text-align: center;
-  padding: 40px 20px;
+  padding: 20px;
+}
+
+.sectionDivide {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: solid 1px white;
 }
 
 .title {
@@ -45,11 +52,18 @@
   gap: 40px;
   text-align: left;
   max-width: 900px;
-  margin: auto;
+  margin: 40px auto;
 }
 
 .about .text {
   max-width: 400px;
+}
+
+.link {
+  padding-top: 8px;
+  a {
+    color: #ffffff;
+  }
 }
 
 @media (max-width: 768px) {
@@ -71,4 +85,31 @@
 .gradient {
   background: linear-gradient(to bottom, #2c2c2c, #0d1117);
   height: 100px;
+}
+
+.videoWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonWrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.button {
+  background-color: #5a0000;
+  color: #fff;
+  font-family: "New Rocker", sans-serif;
+  border: none;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #6f0000;
 }
