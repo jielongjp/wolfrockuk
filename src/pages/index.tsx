@@ -17,12 +17,27 @@ export default function Home() {
       </Head>
       <Header />
       <section className={styles.hero}>
-        <Image
-          src="/IMG_8063.jpeg"
-          alt="Hero"
-          layout="fill"
-          objectFit="cover"
-        />
+        {/* Desktop Image */}
+        <div className={styles.desktopImage}>
+          <Image
+            src="/z83pWmv4.jpeg"
+            alt="Hero"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+        </div>
+
+        {/* Mobile Image */}
+        <div className={styles.mobileImage}>
+          <Image
+            src="/N1QvoGIo.jpeg"
+            alt="Hero Mobile"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+        </div>
       </section>
 
       {/* <section className={styles.gradient}></section> */}

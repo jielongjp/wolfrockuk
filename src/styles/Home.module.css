@@ -11,6 +11,24 @@
   background-position: center;
 }
 
+.desktopImage {
+  display: block;
+}
+
+.mobileImage {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktopImage {
+    display: none;
+  }
+
+  .mobileImage {
+    display: block;
+  }
+}
+
 .section,
 .about {
   text-align: center;
