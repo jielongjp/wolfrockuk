@@ -52,8 +52,14 @@
   border-radius: 8px;
 }
 
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+
 .videoWrapper {
   display: flex;
   justify-content: center;
-  padding-bottom: 12px;
+  padding: 8px;
 }
