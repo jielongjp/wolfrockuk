@@ -103,7 +103,10 @@ export default function MediaPage({ gigs }: Props) {
 
 export async function getStaticProps() {
   const gigsDir = path.join(process.cwd(), "public/gigs");
-  const gigFolders = fs.readdirSync(gigsDir);
+  const gigFolders = fs.readdirSync(gigsDir).filter((folder) => {
+    const folderPath = path.join(gigsDir, folder);
+    return fs.statSync(folderPath).isDirectory();
+  });
 
   const gigs: GigPhotos[] = gigFolders.map((folder) => {
     const folderPath = path.join(gigsDir, folder);

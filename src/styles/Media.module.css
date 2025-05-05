@@ -53,8 +53,6 @@
 }
 
 .videos {
-  display: flex;
-  flex-wrap: wrap;
   padding: 8px;
 }
 
@@ -62,4 +60,11 @@
   display: flex;
   justify-content: center;
   padding: 8px;
+}
+
+@media (min-width: 768px) {
+  .videos {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
