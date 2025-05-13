@@ -84,7 +84,7 @@ export default function Home() {
         </p>
         <br></br>
         <Image
-          src="/WOLF-2025-shirts.jpg"
+          src="/WOLF-2025-shirts.webp"
           alt="WOLF 2025 Rock Circus band t-shirts"
           width={500}
           height={350}
