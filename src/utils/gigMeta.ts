@@ -17,6 +17,7 @@ const gigMeta: GigMeta = {
       "https://www.youtube.com/embed/jYehRJt5PVA?si=GkWEIjU2U6t7VZxz",
       "https://www.youtube.com/embed/wSxpljGRy9E?si=rBYx1CkRWLbrkDPl",
       "https://www.youtube.com/embed/fuWISt-qbg4?si=D4clQKeF5ZtvKrkk",
+      "https://www.youtube.com/embed/ou1dsS_wysM?si=E8BfPUP_cKlr9_aV",
     ],
   },
   wolf240: {
