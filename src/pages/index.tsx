@@ -37,13 +37,14 @@ export default function Home() {
 
       <section className={styles.section}>
         <h2 className={styles.title}>Upcoming Shows</h2>
-        <Image
+        <p className={styles.paragraph}>To be announced shortly...</p>
+        {/* <Image
           src="/PHOTO-2025-02-26-12-36-09.jpg"
           alt="Next Shows"
           width={600}
           height={1000}
           className={styles.image}
-        />
+        /> */}
       </section>
 
       <section className={styles.section}>
@@ -75,12 +76,7 @@ export default function Home() {
         </p>
         <br></br>
         <p className={styles.paragraph}>
-          We are currently taking orders for the 2025 WOLF Rock Circus t-shirts
-          (see below).
-        </p>
-        <p className={styles.paragraph}>
-          For delivery before the 18th July event, please make sure to order by
-          27th June.
+          Here are some examples from previous WOLF shirts.
         </p>
         <br></br>
         <Image

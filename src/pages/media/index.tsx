@@ -41,7 +41,7 @@ export default function MediaPage({ gigs }: Props) {
               (img) => `/gigs/${gig.gigName}/${img}`
             );
 
-            const meta = gigMeta[gig.gigName];
+            const meta = gigMeta.find((m) => m.id === gig.gigName);
             const title = meta?.title || gig.gigName;
             const youtubeVideos = meta?.youtube || [];
 
@@ -103,18 +103,25 @@ export default function MediaPage({ gigs }: Props) {
 
 export async function getStaticProps() {
   const gigsDir = path.join(process.cwd(), "public/gigs");
-  const gigFolders = fs.readdirSync(gigsDir).filter((folder) => {
-    const folderPath = path.join(gigsDir, folder);
-    return fs.statSync(folderPath).isDirectory();
-  });
 
-  const gigs: GigPhotos[] = gigFolders.map((folder) => {
-    const folderPath = path.join(gigsDir, folder);
-    const images = fs
-      .readdirSync(folderPath)
-      .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file));
-    return { gigName: folder, images };
-  });
+  const gigs: GigPhotos[] = gigMeta
+    .map((meta) => {
+      const folderPath = path.join(gigsDir, meta.id);
+
+      if (fs.existsSync(folderPath) && fs.statSync(folderPath).isDirectory()) {
+        const images = fs
+          .readdirSync(folderPath)
+          .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file));
+        return { gigName: meta.id, images };
+      }
+
+      if (meta.youtube && meta.youtube.length > 0) {
+        return { gigName: meta.id, images: [] };
+      }
+
+      return null;
+    })
+    .filter((gig): gig is GigPhotos => gig !== null);
 
   return {
     props: {
