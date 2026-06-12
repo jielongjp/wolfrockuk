@@ -76,11 +76,11 @@ export default function Home() {
         </p>
         <br></br>
         <p className={styles.paragraph}>
-          Here are some examples from previous WOLF shirts.
+          Choose from below for your 2026 shirts
         </p>
         <br></br>
         <Image
-          src="/WOLF-2025-shirts.webp"
+          src="/2026-wolf-shirts.jpg"
           alt="WOLF 2025 Rock Circus band t-shirts"
           width={500}
           height={350}
