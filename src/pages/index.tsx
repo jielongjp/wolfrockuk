@@ -37,14 +37,14 @@ export default function Home() {
 
       <section className={styles.section}>
         <h2 className={styles.title}>Upcoming Shows</h2>
-        {/* <p className={styles.paragraph}>To be announced shortly...</p> */}
-        <Image
+        <p className={styles.paragraph}>To be announced later...</p>
+        {/* <Image
           src="/PHOTO-2026-03-12-20-39-26.jpg"
           alt="Next Shows"
           width={600}
           height={1000}
           className={styles.image}
-        />
+        /> */}
       </section>
 
       <section className={styles.section}>
